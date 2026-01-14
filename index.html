@@ -18,69 +18,84 @@
       padding: 0;
     }
 
+    /* 📱 MOBILE FIRST */
     .container {
-      max-width: 480px;
-      margin: 40px auto;
+      max-width: 92%;
+      margin: 20px auto;
       background-color: #3a177f;
-      border-radius: 12px;
-      padding: 24px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      border-radius: 16px;
+      padding: 32px 24px;
+      box-shadow: 0 0 24px rgba(0,0,0,0.35);
       text-align: center;
     }
 
     h1 {
-      font-size: 22px;
-      margin-bottom: 10px;
+      font-size: 24px;
+      margin-bottom: 12px;
     }
 
     .codigo {
-      font-size: 14px;
+      font-size: 15px;
       opacity: 0.85;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
 
     .estado {
-      margin: 25px 0;
+      margin: 32px 0;
     }
 
-    /* 🔥 ICONO GRANDE Y RESPONSIVE */
+    /* 🔥 ICONO GRANDE EN VERTICAL */
     .estado img {
-      width: 65%;
-      max-width: 260px;
+      width: 70%;
+      max-width: 280px;
       height: auto;
       display: block;
       margin: 0 auto;
     }
 
-    /* Desktop */
-    @media (min-width: 768px) {
-      .estado img {
-        width: 40%;
-        max-width: 200px;
-      }
-    }
-
     .estado-texto {
-      font-size: 20px;
-      margin-top: 10px;
+      font-size: 22px;
+      margin-top: 14px;
     }
 
     .info {
-      font-size: 14px;
-      margin-top: 30px;
-      line-height: 1.6;
+      font-size: 15px;
+      margin-top: 32px;
+      line-height: 1.7;
       opacity: 0.9;
     }
 
     .info span {
       display: block;
-      margin-top: 6px;
+      margin-top: 8px;
     }
 
     footer {
-      margin-top: 30px;
-      font-size: 12px;
+      margin-top: 32px;
+      font-size: 13px;
       opacity: 0.6;
+    }
+
+    /* 💻 DESKTOP / HORIZONTAL */
+    @media (min-width: 768px) {
+      .container {
+        max-width: 480px;
+        margin: 40px auto;
+        padding: 24px;
+      }
+
+      .estado img {
+        width: 40%;
+        max-width: 200px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+
+      .estado-texto {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
@@ -94,7 +109,6 @@
 
     <!-- ESTADO -->
     <div class="estado">
-      <!-- Cambiar SOLO esta imagen según el estado -->
       <img src="img/check.png" alt="Estado de pago">
       <div class="estado-texto">PAGO REGISTRADO</div>
     </div>
