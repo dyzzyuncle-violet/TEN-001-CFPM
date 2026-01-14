@@ -43,9 +43,19 @@
       margin: 25px 0;
     }
 
+    /* 🔥 ICONO RESPONSIVE */
     .estado img {
-      width: 120px;
+      width: 160px;      /* tamaño en móvil */
       height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* En pantallas más grandes */
+    @media (min-width: 768px) {
+      .estado img {
+        width: 120px;
+      }
     }
 
     .estado-texto {
