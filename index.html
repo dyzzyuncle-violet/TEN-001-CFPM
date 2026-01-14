@@ -19,45 +19,48 @@
     }
 
     .container {
-      max-width: 520px;
+      max-width: 480px;
       margin: 40px auto;
       background-color: #3a177f;
-      border-radius: 16px;
-      padding: 36px 28px;
-
-      /* 🔱 MARCO PREMIUM DORADO */
-      border: 1.5px solid rgba(255,183,51,0.45);
-      box-shadow:
-        0 0 0 1px rgba(255,183,51,0.15),
-        0 0 18px rgba(255,183,51,0.12),
-        0 24px 55px rgba(0,0,0,0.45);
-
+      border-radius: 14px;
+      padding: 28px 24px 36px;
+      box-shadow: 0 0 24px rgba(0,0,0,0.35);
       text-align: center;
     }
 
     h1 {
-      font-size: 26px;
+      font-size: 22px;
       margin-bottom: 10px;
       letter-spacing: 0.5px;
     }
 
     .codigo {
-      font-size: 16px;
-      opacity: 0.9;
-      margin-bottom: 30px;
+      font-size: 14px;
+      opacity: 0.85;
+      margin-bottom: 18px;
+    }
+
+    /* Línea superior (A) */
+    .divider.top {
+      width: 60%;
+      height: 2px;
+      margin: 24px auto 32px;
+      background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255,183,51,0.9),
+        transparent
+      );
     }
 
     .estado {
-      margin: 30px 0;
+      margin: 20px 0;
     }
 
-    /* ICONO PROTAGONISTA */
     .estado img {
-      width: 70%;
-      max-width: 260px;
+      width: 200px; /* protagonista */
+      max-width: 80%;
       height: auto;
-      display: block;
-      margin: 0 auto;
     }
 
     .estado-texto {
@@ -67,32 +70,44 @@
     }
 
     .info {
-      font-size: 16px;
+      font-size: 14px;
       margin-top: 34px;
-      line-height: 1.8;
+      line-height: 1.7;
       opacity: 0.95;
     }
 
     .info span {
       display: block;
-      margin-top: 10px;
+      margin-top: 8px;
+    }
+
+    /* Línea inferior (C refinada) */
+    .divider.bottom {
+      width: 35%;
+      height: 1px;
+      margin: 48px auto 0;
+      background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255,183,51,0.6),
+        transparent
+      );
     }
 
     footer {
-      margin-top: 36px;
-      font-size: 13px;
-      opacity: 0.7;
+      margin-top: 18px;
+      font-size: 12px;
+      opacity: 0.6;
     }
 
-    /* Desktop */
-    @media (min-width: 768px) {
-      .container {
-        margin: 60px auto;
+    /* Responsive fino */
+    @media (max-width: 420px) {
+      .estado img {
+        width: 180px;
       }
 
-      .estado img {
-        width: 45%;
-        max-width: 220px;
+      .estado-texto {
+        font-size: 20px;
       }
     }
   </style>
@@ -105,9 +120,10 @@
     <h1>Registro de Pago</h1>
     <div class="codigo">Tarjeta estudiantil · TEN-001-CFPM</div>
 
+    <div class="divider top"></div>
+
     <!-- ESTADO -->
     <div class="estado">
-      <!-- Cambiar SOLO esta imagen según el estado -->
       <img src="img/check.png" alt="Estado de pago">
       <div class="estado-texto">PAGO REGISTRADO</div>
     </div>
@@ -118,6 +134,8 @@
       <span>📌 Este registro se actualiza mensualmente</span>
       <span>🔒 Información de carácter informativo</span>
     </div>
+
+    <div class="divider bottom"></div>
 
     <footer>
       Sistema de verificación · GitHub Pages
