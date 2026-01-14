@@ -16,53 +16,61 @@
       color: #FFB733;
       margin: 0;
       padding: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
     }
 
-    /* 📱 MOBILE FIRST */
     .container {
-      max-width: 92%;
-      margin: 20px auto;
+      width: 90%;
+      max-width: 520px;
+      min-height: 80vh;
+      margin: 40px auto;
       background-color: #3a177f;
       border-radius: 16px;
       padding: 32px 24px;
-      box-shadow: 0 0 24px rgba(0,0,0,0.35);
+      box-shadow: 0 0 30px rgba(0,0,0,0.35);
       text-align: center;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     h1 {
       font-size: 24px;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
 
     .codigo {
-      font-size: 15px;
+      font-size: 14px;
       opacity: 0.85;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
     }
 
     .estado {
-      margin: 32px 0;
+      margin: 30px 0;
     }
 
-    /* 🔥 ICONO GRANDE EN VERTICAL */
+    /* 🔥 IMAGEN REALMENTE GRANDE EN CELULAR */
     .estado img {
-      width: 70%;
-      max-width: 280px;
+      width: 55vw;
+      max-width: 260px;
       height: auto;
-      display: block;
-      margin: 0 auto;
     }
 
     .estado-texto {
       font-size: 22px;
-      margin-top: 14px;
+      margin-top: 16px;
+      letter-spacing: 1px;
     }
 
     .info {
       font-size: 15px;
-      margin-top: 32px;
-      line-height: 1.7;
-      opacity: 0.9;
+      margin-top: 30px;
+      line-height: 1.8;
+      opacity: 0.95;
     }
 
     .info span {
@@ -71,30 +79,19 @@
     }
 
     footer {
-      margin-top: 32px;
-      font-size: 13px;
+      margin-top: 40px;
+      font-size: 12px;
       opacity: 0.6;
     }
 
-    /* 💻 DESKTOP / HORIZONTAL */
-    @media (min-width: 768px) {
+    /* 📱 AJUSTE EXTRA PARA CELULARES CHICOS */
+    @media (max-height: 700px) {
       .container {
-        max-width: 480px;
-        margin: 40px auto;
-        padding: 24px;
+        min-height: 90vh;
       }
 
       .estado img {
-        width: 40%;
-        max-width: 200px;
-      }
-
-      h1 {
-        font-size: 22px;
-      }
-
-      .estado-texto {
-        font-size: 20px;
+        width: 65vw;
       }
     }
   </style>
@@ -107,13 +104,11 @@
     <h1>Registro de Pago</h1>
     <div class="codigo">Tarjeta estudiantil · TEN-001-CFPM</div>
 
-    <!-- ESTADO -->
     <div class="estado">
       <img src="img/check.png" alt="Estado de pago">
       <div class="estado-texto">PAGO REGISTRADO</div>
     </div>
 
-    <!-- INFO -->
     <div class="info">
       <span>📅 Mes vigente: <strong>Marzo 2026</strong></span>
       <span>📌 Este registro se actualiza mensualmente</span>
