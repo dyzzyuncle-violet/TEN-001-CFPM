@@ -2,37 +2,103 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>TEN-001-CFPM</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap"
-    rel="stylesheet" />
+  <title>Registro de Pago – Tarjeta Estudiantil</title>
+
+  <!-- Fuente -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+
   <style>
     body {
       background-color: #451e97;
-      color: #FFB733;
       font-family: 'Anonymous Pro', monospace;
+      color: #FFB733;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 480px;
+      margin: 40px auto;
+      background-color: #3a177f;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
       text-align: center;
-      padding: 50px 20px 50px 20px;
     }
-    h1, h2 {
-      margin: 20px 0;
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 10px;
     }
-    img {
-      margin-top: 30px;
-      max-width: 90%;
+
+    .codigo {
+      font-size: 14px;
+      opacity: 0.85;
+      margin-bottom: 20px;
+    }
+
+    .estado {
+      margin: 25px 0;
+    }
+
+    .estado img {
+      width: 120px;
       height: auto;
-      border-radius: 10px;
-      opacity: 0;
-      transition: opacity 1s ease-in;
     }
-    img.loaded {
-      opacity: 1;
+
+    .estado-texto {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    .info {
+      font-size: 14px;
+      margin-top: 30px;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    .info span {
+      display: block;
+      margin-top: 6px;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 12px;
+      opacity: 0.6;
     }
   </style>
 </head>
+
 <body>
-  <h1>TEN-001-CFPM</h1>
-  <h2>Resumen de pago</h2>
-  <img src="descarga%20%283%29.png" alt="Resumen de pago" class="loaded" />
+
+  <div class="container">
+
+    <h1>Registro de Pago</h1>
+    <div class="codigo">Tarjeta estudiantil · TEN-001-CFPM</div>
+
+    <!-- ESTADO -->
+    <div class="estado">
+      <!-- Cambiar SOLO esta imagen según el estado -->
+      <img src="img/check.png" alt="Estado de pago">
+      <div class="estado-texto">PAGO REGISTRADO</div>
+    </div>
+
+    <!-- INFO -->
+    <div class="info">
+      <span>📅 Mes vigente: <strong>Marzo 2026</strong></span>
+      <span>📌 Este registro se actualiza mensualmente</span>
+      <span>🔒 Información de carácter informativo</span>
+    </div>
+
+    <footer>
+      Sistema de verificación · GitHub Pages
+    </footer>
+
+  </div>
+
 </body>
 </html>
